@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limite do Cartão</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="g.jpg">
+</head>
+<body>
+    <header>
+        <h1>Gerenciar Limite do Cartão</h1>
+    </header>
+
+    <div class="container">
+        <div class="card-balance">
+            <h2>Limite do Cartão: R$ <span id="cardLimit">0,00</span></h2>
+            <h2>Disponível: R$ <span id="availableBalance">0,00</span></h2>
+        </div>
+
+        <div class="limit-form">
+            <input type="number" id="limitAmount" placeholder="Limite do Cartão">
+            <input type="number" id="availableAmount" placeholder="Saldo Disponível">
+            <button onclick="setLimit()">Definir Limite e Saldo</button>
+        </div>
+
+        <div class="transaction-form">
+            <input type="text" id="expenseDescription" placeholder="Descrição da Despesa">
+            <input type="number" id="expenseAmount" placeholder="Valor da Despesa">
+            <button onclick="addExpense()">Adicionar Despesa</button>
+        </div>
+
+        <ul id="expenseList"></ul>
+
+        <div class="button-container">
+            <button onclick="window.location.href='Finanças_pessoais.html'">voltar ao gerenciador de finanças</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='inicio.html'">voltar ao início</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='juros.html'">Gerenciador de Juros compostos</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='parcelamento.html'">Controle de parcelamento e dívidas</button>
+        </div>
+    
+    </div>
+
+    <footer>
+        <p>&copy;- Todos os Direitos do site Reservados para Rafael Garrido e Mateus Borges</p>
+    </footer>
+    
+    <script src="limite.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Juros Composto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Juros Composto</h1>
+    </header>
+
+    <div class="container">
+        <div class="input-form">
+            <input type="number" id="principal" placeholder="Valor Inicial (R$)" required>
+            <input type="number" id="rate" placeholder="Taxa de Juros (%)" required>
+            <input type="number" id="time" placeholder="Tempo (anos)" required>
+            <button onclick="calculateCompoundInterest()">Calcular Juros Compostos</button>
+        </div>
+
+        <div class="result">
+            <h2>Montante Final: R$ <span id="result">0,00</span></h2>
+        </div>
+
+        <canvas id="growthChart" width="400" height="200"></canvas>
+
+        <div class="button-container">
+            <button onclick="window.location.href='limite.html'">Gerenciar Limite do Cartão</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='inicio.html'">voltar ao início</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='Finanças_pessoais.html'">Gerenciador de finaças</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='parcelamento.html'">Controle de parcelamento e dívidas</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Todos os Direitos do site Reservados para Rafael Garrido e Mateus Borges</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="juros.js"></script>
+</body>
+</html>

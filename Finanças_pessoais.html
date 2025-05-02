@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Finanças Pessoais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="g.jpg">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Finanças Pessoais</h1>
+    </header>
+
+    <div class="container">
+        <div class="balance">
+            <h2>Saldo Atual: <span id="balance">R$ 0,00</span></h2>
+        </div>
+
+        <div class="transaction-form">
+            <input type="text" id="description" placeholder="Descrição">
+            <input type="number" id="amount" placeholder="Valor">
+            <select id="category">
+                <option value="Alimentação">Alimentação</option>
+                <option value="Lazer">Lazer</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <button onclick="addTransaction()">Adicionar</button>
+        </div>
+
+        <ul id="transactionList"></ul>
+
+        <canvas id="expenseChart" width="400" height="200"></canvas>
+
+        <div class="button-container">
+            <button onclick="window.location.href='limite.html'">Gerenciar Limite do Cartão</button>
+        </div>
+
+        <div class="button-container">
+            <button onclick="window.location.href='inicio.html'">voltar ao início</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='juros.html'">Gerenciador de Juros compostos</button>
+        </div>
+        <div class="button-container">
+            <button onclick="window.location.href='parcelamento.html'">Controle de parcelamento e dívidas</button>
+        </div>
+       
+    
+       
+    </div>
+
+    <footer>
+        <p>&copy; Todos os Direitos do site Reservados para Rafael Garrido e Mateus Borges</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

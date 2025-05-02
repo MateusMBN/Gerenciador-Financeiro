@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de Parcelamento e Controle de Dívidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Controle de Parcelamento e Dívidas</h1>
+    </header>
+
+    <div class="container">
+        <!-- Formulário para adicionar uma nova dívida parcelada -->
+        <div class="input-form">
+            <input type="text" id="debtDescription" placeholder="Descrição da Dívida" required>
+            <input type="number" id="totalAmount" placeholder="Valor Total da Dívida (R$)" required>
+            <input type="number" id="numInstallments" placeholder="Número de Parcelas" required>
+            <button onclick="addDebt()">Adicionar Dívida</button>
+        </div>
+
+        <!-- Lista de dívidas e parcelas restantes -->
+        <div class="debt-list">
+            <h2>Parcelas Mensais:</h2>
+            <ul id="debtList"></ul>
+        </div>
+
+        <!-- Botões de Navegação -->
+        <div class="button-container">
+            <button onclick="window.location.href='inicio.html'">Página Inicial</button>
+            <button onclick="window.location.href='Finanças_pessoais.html'">Gerenciador de finanças</button>
+            <button onclick="window.location.href='limite.html'">Gerenciador de Limite de Cartão</button>
+            <button onclick="window.location.href='juros.html'">Simulador de Juros</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Todos os Direitos do site Reservados para Rafael Garrido e Mateus Borges</p>
+    </footer>
+
+    <script src="parcelamento.js"></script>
+</body>
+</html>
